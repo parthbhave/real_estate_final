@@ -1,0 +1,19 @@
+- Currently, Route to Controller communication is not working
+
+- Data migrations worked on a sample table on my computer using Laravel installed on top of XAMPP
+
+- So I have created a prototype with code and written about design decisions - some code is commented out
+
+- Important files -
+
+	- /app/http/routes.php - HTTP routes to controllers
+	- /app/http/Kernel.php - contains scheduled task XML parser
+	- /app/http/Controllers/ListingController.php - controllers for this application
+	- /app/http/Controllers/Controller.php - controllers base class
+	- /database/migrations/2014_10_12_000000_create_listing_photos_table.php - migration to create listing and photo tables
+
+- Database schema design -
+
+	- 2 tables - listing and photo
+	- photo table is one row per photo tag along with foreign key listingId
+	- listing table is one row per listing tag - includes address columns as well
